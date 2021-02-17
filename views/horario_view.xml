@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="cine.listado_horarios_form">
+      <field name="name">Formulario de horarios</field>
+      <field name="model">cine.horario_sala_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo horario">
+          <sheet>
+            <group name="GrupoPadre">
+
+              <field name="precio"/>
+              <field name="pelicula"/>
+              <field name="hora"/>
+              <field name="sala"/>
+
+
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="cine.listado_horarios_tree">
+      <field name="name">Listado de horarios</field>
+      <field name="model">cine.horario_sala_model</field>
+      <field name="arch" type="xml">
+        <tree>
+
+          <field name="precio"/>
+          <field name="pelicula"/>
+          <field name="hora"/>
+          <field name="sala"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="cine.action_window_horarios">
+      <field name="name">Listado de horarios</field>
+      <field name="res_model">cine.horario_sala_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>

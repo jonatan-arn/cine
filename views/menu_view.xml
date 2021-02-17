@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+    <menuitem name="Gestión Cine" id="cine.menu_root"/>
+
+    <menuitem name="Peliculas" id="cine.menu_peliculas" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_peliculas_listado" parent="cine.menu_peliculas"
+              action="cine.action_window_peliculas"/>
+
+    <menuitem name="Horario" id="cine.menu_horario" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_horarios_listado" parent="cine.menu_horario"
+              action="cine.action_window_horarios"/>
+
+    <menuitem name="Salas" id="cine.menu_salas" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_salas_listado" parent="cine.menu_salas"
+              action="cine.action_window_salas"/>
+
+    <menuitem name="Ventas Entrada" id="cine.menu_venta_entradas" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_venta_entradas_listado" parent="cine.menu_venta_entradas"
+              action="cine.action_window_venta_entradas"/>
+
+    <menuitem name="Empleados" id="cine.menu_empleados" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_empleados_listado" parent="cine.menu_empleados"
+              action="cine.action_window_empleados"/>
+    
+    <menuitem name="Snacks" id="cine.menu_snacks" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_snacks_listado" parent="cine.menu_snacks"
+              action="cine.action_window_snacks"/>
+  </data>
+</odoo>

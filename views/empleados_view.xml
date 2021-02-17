@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="cine.listado_empleados_form">
+      <field name="name">Formulario de empleados</field>
+      <field name="model">cine.empleados_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo empleado">
+          <sheet>
+            <group name="GrupoPadre">
+              
+                <field name="id"/>
+                <field name="name"/>
+                <field name="dni"/>                
+                <field name="puesto_trabajo"/>
+                
+
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="cine.listado_empleados_tree">
+      <field name="name">Listado de empleados</field>
+      <field name="model">cine.empleados_model</field>
+      <field name="arch" type="xml">
+        <tree>           
+  
+                <field name="id"/>
+                <field name="name"/>
+                <field name="dni"/>                
+                <field name="puesto_trabajo"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="cine.action_window_empleados">
+      <field name="name">Listado de emplados</field>
+      <field name="res_model">cine.empleados_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>
