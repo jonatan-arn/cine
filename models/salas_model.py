@@ -7,7 +7,7 @@ class salas_model(models.Model):
     _name = 'cine.salas_model'
     _description = 'Modelo de las salas'
 
-    name = fields.Integer(String="Nº de sala",index=True,required=True)
+    name = fields.Char(String="Nº de sala",index=True,required=True)
     cantidad_butacas_totales = fields.Integer(String="Cantidad de butacas totales de la sala",index=True,required=True)
     #butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True,default=lambda self: self.cantidad_butacas_totales)
     #butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True)

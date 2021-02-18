@@ -19,7 +19,7 @@ class horario_sala_model(models.Model):
         self.ensure_one
         hora =self.hora.strftime("%m/%d/%Y, %H:%M:%S")
         n_pelicula = "Pelicula: "+self.pelicula.name    
-        n_sala = "Sala: "+str(self.sala.id)
+        n_sala = "Sala: "+self.sala.id
         self.name="Hora: ",str(hora),n_pelicula,n_sala
 
     @api.constrains('precio')

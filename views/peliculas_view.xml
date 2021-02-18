@@ -87,15 +87,21 @@
       <field name="type">search</field>
       <field name="arch" type="xml">
         <search>
-          <group>
-            <filter string="todas las edades" name="pegi" domain="[{'pegi','=','todas las edades'}]"/>
-            <filter string="+7" name="pegi" domain="[{'pegi','=','+7'}]"/>
-            <filter string="+12" name="pegi" domain="[{'pegi','=','+12'}]"/>
-            <filter string="+13" name="pegi" domain="[{'pegi','=','+13'}]"/>
-            <filter string="+14" name="pegi" domain="[{'pegi','=','+14'}]"/>
-            <filter string="+16" name="pegi" domain="[{'pegi','=','+16'}]"/>
-            <filter string="+18" name="pegi" domain="[{'pegi','=','+18'}]"/>
-          </group>
+          <field name="name" />
+          <field name="director"/>
+          <field name="protagonista"/>
+          <field name="fecha_estreno"/>
+          <field name="fecha_fin_en_el_cine"/>
+          <field name="poster"/>
+
+          <filter string="todas las edades" name="pegi" domain="[{'pegi','=','todas las edades'}]"/>
+          <filter string="+7" name="pegi" domain="[{'pegi','=','+7'}]"/>
+          <filter string="+12" name="pegi" domain="[{'pegi','=','+12'}]"/>
+          <filter string="+13" name="pegi" domain="[{'pegi','=','+13'}]"/>
+          <filter string="+14" name="pegi" domain="[{'pegi','=','+14'}]"/>
+          <filter string="+16" name="pegi" domain="[{'pegi','=','+16'}]"/>
+          <filter string="+18" name="pegi" domain="[{'pegi','=','+18'}]"/>
+
         </search>
       </field>
     </record>

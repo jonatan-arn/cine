@@ -7,14 +7,10 @@
         <form string="Nuevo empleado">
           <sheet>
             <group name="GrupoPadre">
-              
                 <field name="id"/>
                 <field name="name"/>
                 <field name="dni"/>                
                 <field name="puesto_trabajo"/>
-                
-
-
             </group>
           </sheet>
         </form>
@@ -26,7 +22,6 @@
       <field name="model">cine.empleados_model</field>
       <field name="arch" type="xml">
         <tree>           
-  
                 <field name="id"/>
                 <field name="name"/>
                 <field name="dni"/>                

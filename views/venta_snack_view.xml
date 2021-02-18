@@ -1,0 +1,74 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="cine.listado_venta_snacks_form">
+      <field name="name">Formulario de ventas de snacks</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="arch" type="xml">
+        <form string="Nueva ventas">
+          <header>
+            <button name="eliminaFacturas" type="object" confirm="Desea eliminar las facturas?" string="Eliminar facturas" class="oe_highlight" />
+          </header>
+          <sheet>
+            <group name="GrupoPadre">
+              <field name="id"/>
+              <field name="snack"/>
+              <field name="cantidad_snack"/>
+              <field name="precio_total"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="cine.listado_venta_snacks_tree">
+      <field name="name">Listado de venta de snacks</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="snack"/>
+          <field name="cantidad_snack"/>
+          <field name="fecha"/>
+          <field name="precio_total"/>
+        </tree>
+      </field>
+    </record>
+
+
+
+
+    <record model="ir.ui.view" id="cine.venta_pivot">
+      <field name="name">Pivot de ventas</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="arch" type="xml">
+        <pivot string="Pivot de Ventas">
+          <field name="fecha" type="row" interval="month" />
+          <field name="cantidad_snack" type="measure" />
+        </pivot>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="cine.venta_graph">
+      <field name="name">Grafico de ventas</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="arch" type="xml">
+        <graph type="bar" stacked="True" string="Grafico de Ventas">
+          <field name="fecha" type="row" interval="month" />
+          <field name="cantidad_snack" type="measure" />
+        </graph>
+      </field>
+    </record>
+
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="cine.action_window_venta_snacks">
+      <field name="name">Listado de ventas de snacks</field>
+      <field name="res_model">cine.venta_snack_model</field>
+      <field name="view_mode">tree,form,graph,pivot</field>
+    </record>
+
+
+  </data>
+</odoo>

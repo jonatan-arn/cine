@@ -9,7 +9,6 @@
             <group name="GrupoPadre">
               <field name="name"/>
               <field name="precio"/>
-              <field name="stock"/>
               <field name="foto"/>
             </group>
           </sheet>
@@ -25,7 +24,6 @@
 
           <field name="name"/>
           <field name="precio"/>
-          <field name="stock"/>
           <field name="foto"/>
         </tree>
       </field>

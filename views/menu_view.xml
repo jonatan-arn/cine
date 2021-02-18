@@ -14,9 +14,9 @@
     <menuitem name="Listado" id="cine.menu_salas_listado" parent="cine.menu_salas"
               action="cine.action_window_salas"/>
 
-    <menuitem name="Ventas Entrada" id="cine.menu_venta_entradas" parent="cine.menu_root"/>
-    <menuitem name="Listado" id="cine.menu_venta_entradas_listado" parent="cine.menu_venta_entradas"
-              action="cine.action_window_venta_entradas"/>
+    <menuitem name="Ventas Snacks" id="cine.menu_venta_snacks" parent="cine.menu_root"/>
+    <menuitem name="Listado" id="cine.menu_venta_snacks_listado" parent="cine.menu_venta_snacks"
+              action="cine.action_window_venta_snacks"/>
 
     <menuitem name="Empleados" id="cine.menu_empleados" parent="cine.menu_root"/>
     <menuitem name="Listado" id="cine.menu_empleados_listado" parent="cine.menu_empleados"

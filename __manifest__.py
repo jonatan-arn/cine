@@ -29,7 +29,7 @@
         'views/peliculas_view.xml',
         'views/horario_view.xml',
         'views/salas_view.xml',
-        'views/venta_entradas_view.xml',
+        'views/venta_snack_view.xml',
         'views/empleados_view.xml',
         'views/snacks_view.xml',
         'views/menu_view.xml',
