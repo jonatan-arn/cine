@@ -9,7 +9,8 @@ class salas_model(models.Model):
 
     name = fields.Integer(String="Nº de sala",index=True,required=True)
     cantidad_butacas_totales = fields.Integer(String="Cantidad de butacas totales de la sala",index=True,required=True)
-    butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True,default=lambda self: self.cantidad_butacas_totales)
+    #butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True,default=lambda self: self.cantidad_butacas_totales)
+    #butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True)
     es3d = fields.Boolean(String="Es 3d",index=True,required=True)
     horario = fields.One2many("cine.horario_sala_model","sala")
 #     value = fields.Integer()

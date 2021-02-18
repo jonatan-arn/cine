@@ -9,6 +9,7 @@
             <group name="GrupoPadre">
               <field name="name"/>
               <field name="cantidad_butacas_totales"/>
+              
               <field name="es3d"/>
             </group>
           </sheet>
@@ -24,7 +25,7 @@
 
           <field name="name"/>
           <field name="cantidad_butacas_totales"/>
-          <field name="butacas_libres"/>
+          
           <field name="es3d"/>
         </tree>
       </field>

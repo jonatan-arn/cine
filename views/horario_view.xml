@@ -12,6 +12,7 @@
               <field name="pelicula"/>
               <field name="hora"/>
               <field name="sala"/>
+              <field name="butacas_libres"/>
 
 
 
@@ -31,6 +32,7 @@
           <field name="pelicula"/>
           <field name="hora"/>
           <field name="sala"/>
+          <field name="butacas_libres"/>
         </tree>
       </field>
     </record>

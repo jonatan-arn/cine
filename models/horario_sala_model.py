@@ -12,7 +12,8 @@ class horario_sala_model(models.Model):
     pelicula = fields.Many2one("cine.peliculas_model",String="Pelicula que se proyecta",index=True,required=True)
     hora = fields.Datetime(String="Hora a la que se proyecta la pelicula",index=True,required=True)
     sala = fields.Many2one("cine.salas_model",String="Sala donde se proyecta la pelicula",required=True)
-    venta = fields.One2many("cine.venta_entradas_model","butaca")
+    butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True,default=lambda self: self.sala.cantidad_butacas_totales)
+    
 
     def crearName(self):
         self.ensure_one

@@ -9,9 +9,8 @@
             <group name="GrupoPadre">
               
                 <field name="id"/>
-                <field name="butaca"/>
-                <field name="cantidad_butacas"/>
-                
+                <field name="snack"/>
+                <field name="cantidad_snack"/>
                 <field name="precio_total"/>
                 
 
@@ -27,16 +26,9 @@
       <field name="model">cine.venta_entradas_model</field>
       <field name="arch" type="xml">
         <tree>           
-                <field name="id"/>                
-                <field name="butaca">
-                  <tree>
-                    <field name="precio"/>
-                    <field name="pelicula"/>
-                    <field name="hora"/>
-                    <field name="sala"/>
-                  </tree>
-                </field>
-                <field name="cantidad_butacas"/>                
+                <field name="id"/>
+                <field name="snack"/>
+                <field name="cantidad_snack"/>
                 <field name="precio_total"/>
         </tree>
       </field>
