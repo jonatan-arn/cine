@@ -7,6 +7,7 @@
         <form string="Nueva ventas">
           <header>
             <button name="eliminaFacturas" type="object" confirm="Desea eliminar las facturas?" string="Eliminar facturas" class="oe_highlight" />
+            <button name="ocultarFacturas" type="object"  string="Archivar facturas" class="oe_highlight" />
           </header>
           <sheet>
             <notebook>
@@ -72,6 +73,25 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="view_cine_venta_search">
+      <field name="name">Filtro active</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="type">search</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name" />
+          <field name="director"/>
+          <field name="protagonista"/>
+          <field name="fecha_estreno"/>
+          <field name="fecha_fin_en_el_cine"/>
+          <field name="poster"/>
+
+          <filter string="Activas" name="activas" domain="[{'active','=','True'}]"/>
+          <filter string="Archivadas" name="noactivas" domain="[{'active','=','False'}]"/>
+
+        </search>
+      </field>
+    </record>
 
 
     <!-- actions opening views on models -->

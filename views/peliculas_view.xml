@@ -98,12 +98,12 @@
           <field name="poster"/>
 
           <filter string="todas las edades" name="pegi" domain="[{'pegi','=','todas las edades'}]"/>
-          <filter string="+7" name="pegi" domain="[{'pegi','=','+7'}]"/>
-          <filter string="+12" name="pegi" domain="[{'pegi','=','+12'}]"/>
-          <filter string="+13" name="pegi" domain="[{'pegi','=','+13'}]"/>
-          <filter string="+14" name="pegi" domain="[{'pegi','=','+14'}]"/>
-          <filter string="+16" name="pegi" domain="[{'pegi','=','+16'}]"/>
-          <filter string="+18" name="pegi" domain="[{'pegi','=','+18'}]"/>
+          <filter string="+7" name="pegi7" domain="[{'pegi','=','+7'}]"/>
+          <filter string="+12" name="pegi12" domain="[{'pegi','=','+12'}]"/>
+          <filter string="+13" name="pegi13" domain="[{'pegi','=','+13'}]"/>
+          <filter string="+14" name="pegi14" domain="[{'pegi','=','+14'}]"/>
+          <filter string="+16" name="pegi16" domain="[{'pegi','=','+16'}]"/>
+          <filter string="+18" name="pegi18" domain="[{'pegi','=','+18'}]"/>
 
         </search>
       </field>

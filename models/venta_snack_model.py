@@ -29,6 +29,11 @@ class venta_snack_model(models.Model):
                 rec.active = "False"  
                 rec.unlink()
     
+    def ocultarFacturas(self):
+        historialFacturas = self.search([("realizada","=","True")])
+        for factura in listaTareasRealizadas:
+            factura.active=False
+        return True
 
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
