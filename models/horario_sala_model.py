@@ -19,13 +19,18 @@ class horario_sala_model(models.Model):
         self.ensure_one
         hora =self.hora.strftime("%m/%d/%Y, %H:%M:%S")
         n_pelicula = "Pelicula: "+self.pelicula.name    
-        n_sala = "Sala: "+self.sala.id
+        n_sala = "Sala: "+self.sala.name
         self.name="Hora: ",str(hora),n_pelicula,n_sala
 
     @api.constrains('precio')
-    def validate_dni(self):
+    def validate_precio(self):
         if (self.precio<=0):
             raise ValidationError("Error el precio tiene que ser mayor de 0")
+    
+    @api.constrains('butacas_libres')
+    def validate_butaca(self):
+        if (self.sala.cantidad_butacas_totales != self.butacas_libres):
+            raise ValidationError("Error las butacas libres tienen que coincidir con las totales")
 
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
