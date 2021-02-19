@@ -29,10 +29,7 @@
       <field name="model">cine.peliculas_model</field>
       <field name="arch" type="xml">
         <tree>
-          <label for="name" class="oe_edit_only" />
-          <h1>
-            <field name="name" />
-          </h1>
+          <field name="name" />
           <field name="director"/>
           <field name="protagonista"/>
           <field name="pegi"/>
