@@ -6,17 +6,22 @@
       <field name="arch" type="xml">
         <form string="Nuevo horario">
           <sheet>
-            <group name="GrupoPadre">
+            <notebook>
+              <page string="Datos de la hora">
+                <group name="GrupoPadre">
+                  <field name="precio"/>
+                  <field name="hora"/>
+                  <field name="butacas_libres"/>
+                </group>
+              </page>
+              <page string="Datos de la sala y pelicula">
+                <group name="GrupoPadre">
+                  <field name="sala"/>
+                  <field name="pelicula"/>
+                </group>
+              </page>
+            </notebook>
 
-              <field name="precio"/>
-              <field name="pelicula"/>
-              <field name="hora"/>
-              <field name="sala"/>
-              <field name="butacas_libres"/>
-
-
-
-            </group>
           </sheet>
         </form>
       </field>

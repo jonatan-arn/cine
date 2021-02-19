@@ -7,6 +7,8 @@ class empleados_model(models.Model):
     _name = 'cine.empleados_model'
     _description = 'Modelo de los empleados'
 
+    _sql_constraints = [('sql_constraints_id', 'unique(id)', 'Ese id ya existe'),
+    ('sql_constraints_dni', 'unique(dni)', 'Ese dni ya existe')]
     id = fields.Integer(String="Id del trabajador",index=True,required=True)
     name = fields.Char(String="Nombre",index=True,required=True)
     dni = fields.Char(String="Dni",index=True,required=True)

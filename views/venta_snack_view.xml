@@ -9,12 +9,21 @@
             <button name="eliminaFacturas" type="object" confirm="Desea eliminar las facturas?" string="Eliminar facturas" class="oe_highlight" />
           </header>
           <sheet>
-            <group name="GrupoPadre">
-              <field name="id"/>
-              <field name="snack"/>
-              <field name="cantidad_snack"/>
-              <field name="precio_total"/>
-            </group>
+            <notebook>
+              <page string="Datos de la factura">
+                <group name="GrupoPadre">
+                  <field name="id"/>
+                  <field name="snack"/>
+                  <field name="cantidad_snack"/>
+                  <field name="precio_total"/>
+                </group>
+              </page>
+              <page string="Datos del snack">
+                <group name="GrupoPadre">
+                  <field name="snack"/>
+                </group>
+              </page>
+            </notebook>
           </sheet>
         </form>
       </field>
@@ -24,11 +33,14 @@
       <field name="name">Listado de venta de snacks</field>
       <field name="model">cine.venta_snack_model</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree decoration-muted="active == True">
           <field name="id"/>
           <field name="snack"/>
           <field name="cantidad_snack"/>
-          <field name="fecha"/>
+          <label for="fecha" class="oe_edit_only" />
+          <h1>
+            <field name="fecha"/>
+          </h1>
           <field name="precio_total"/>
         </tree>
       </field>

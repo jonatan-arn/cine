@@ -9,7 +9,7 @@
             <group name="GrupoPadre">
               <field name="name"/>
               <field name="precio"/>
-              <field name="foto"/>
+              <field name="foto" widget="image" style="width: 120px; height: 150px;"/>
             </group>
           </sheet>
         </form>

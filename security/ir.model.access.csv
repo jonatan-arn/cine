@@ -1,18 +1,29 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_cine_peliculas_model_venta,cine.peliculas_model,model_cine_peliculas_model,,1,1,1,1
+access_cine_peliculas_model_venta,cine.peliculas_model,model_cine_peliculas_model,clinica_group_adm,1,1,1,1
+access_cine_peliculas_model_venta,cine.peliculas_model,model_cine_peliculas_model,clinica_group_vendedor,0,0,0,0
 
 
 access_cine_horario_sala_model,cine.horario_sala_model,model_cine_horario_sala_model,,1,1,1,1
+access_cine_horario_sala_model,cine.horario_sala_model,model_cine_horario_sala_model,clinica_group_adm,1,1,1,1
+access_cine_horario_sala_model,cine.horario_sala_model,model_cine_horario_sala_model,clinica_group_vendedor,0,0,0,0
 
 access_cine_salas_model,cine.salas_model,model_cine_salas_model,,1,1,1,1
+access_cine_salas_model,cine.salas_model,model_cine_salas_model,clinica_group_adm,1,1,1,1
+access_cine_salas_model,cine.salas_model,model_cine_salas_model,clinica_group_vendedor,0,0,0,0
 
 
 access_cine_venta_snack_model,cine.venta_snack_model,model_cine_venta_snack_model,,1,1,1,1
+access_cine_venta_snack_model,cine.venta_snack_model,model_cine_venta_snack_model,clinica_group_adm,1,1,1,1
+access_cine_venta_snack_model,cine.venta_snack_model,model_cine_venta_snack_model,clinica_group_vendedor,1,1,1,1
 
 
 access_cine_empleados_model,cine.empleados_model,model_cine_empleados_model,,1,1,1,1
+access_cine_empleados_model,cine.empleados_model,model_cine_empleados_model,clinica_group_adm,1,1,1,1
+access_cine_empleados_model,cine.empleados_model,model_cine_empleados_model,clinica_group_vendedor,1,0,0,0
 
 
 access_cine_snacks_model,cine.snacks_model,model_cine_snacks_model,,1,1,1,1
-
+access_cine_snacks_model,cine.snacks_model,model_cine_snacks_model,clinica_group_adm,1,1,1,1
+access_cine_snacks_model,cine.snacks_model,model_cine_snacks_model,clinica_group_vendedor,1,1,1,1
