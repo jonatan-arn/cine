@@ -11,7 +11,7 @@ class venta_snack_model(models.Model):
     _sql_constraints = [('sql_constraints_id', 'unique(id)', 'Ese id ya existe')]
     
     id = fields.Integer(String="Id venta entrada",index=True,required=True)
-    cantidad_snack= fields.Integer(String="Cantidad de butacas totales de la sala",index=True,required=True)
+    cantidad_snack= fields.Integer(String="Cantidad de butacas totales de la sala",required=True)
     snack = fields.Many2one("cine.snacks_model",String="Precio del snack",index=True,required=True)
     precio_total = fields.Float(String="Cantidad total",readonly=True,compute="Calc_total")
     fecha = fields.Datetime(string="Fecha",default=lambda self: datetime.now(), required=True)

@@ -8,11 +8,11 @@ class horario_sala_model(models.Model):
     _description = 'Modelo de los horario de las salas'
 
     name = fields.Char(compute="crearName")
-    precio = fields.Integer(String="Precio de la pelicula",index=True,required=True)
+    precio = fields.Integer(String="Precio de la pelicula",required=True)
     pelicula = fields.Many2one("cine.peliculas_model",String="Pelicula que se proyecta",index=True,required=True)
-    hora = fields.Datetime(String="Hora a la que se proyecta la pelicula",index=True,required=True)
+    hora = fields.Datetime(String="Hora a la que se proyecta la pelicula",required=True)
     sala = fields.Many2one("cine.salas_model",String="Sala donde se proyecta la pelicula",required=True)
-    butacas_libres = fields.Integer(String="Butacas libres de la sala",index=True,required=True,default=lambda self: self.sala.cantidad_butacas_totales)
+    butacas_libres = fields.Integer(String="Butacas libres de la sala",required=True,default=lambda self: self.sala.cantidad_butacas_totales)
     
 
     def crearName(self):
