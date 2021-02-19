@@ -28,7 +28,7 @@ class horario_sala_model(models.Model):
             raise ValidationError("Error el precio tiene que ser mayor de 0")
     
     @api.constrains('butacas_libres')
-    def validate_butaca(self):
+    def validate_butacas(self):
         if (self.sala.cantidad_butacas_totales != self.butacas_libres):
             raise ValidationError("Error las butacas libres tienen que coincidir con las totales")
 
