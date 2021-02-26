@@ -14,13 +14,14 @@ class horario_sala_model(models.Model):
     sala = fields.Many2one("cine.salas_model",String="Sala donde se proyecta la pelicula",required=True)
     butacas_libres = fields.Integer(String="Butacas libres de la sala",required=True,default=lambda self: self.sala.cantidad_butacas_totales)
     
-
+    
+    @api.depends('name')
     def crearName(self):
-        self.ensure_one
-        hora =self.hora.strftime("%m/%d/%Y, %H:%M:%S")
-        n_pelicula = "Pelicula: "+self.pelicula.name    
-        n_sala = "Sala: "+self.sala.name
-        self.name="Hora: ",str(hora),n_pelicula,n_sala
+        for r in self:
+            hora =r.hora.strftime("%m/%d/%Y, %H:%M:%S")
+            n_pelicula = "Pelicula: "+r.pelicula.name    
+            n_sala = "Sala: "+r.sala.name
+            r.name="Hora: ",str(hora),n_pelicula,n_sala
 
     @api.constrains('precio')
     def validate_precio(self):

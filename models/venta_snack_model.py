@@ -22,7 +22,17 @@ class venta_snack_model(models.Model):
         for r in self:
             r.precio_total = r.cantidad_snack * r.snack.precio
             
-            
+    
+    @api.constrains('snack')
+    def actulizaStock(self):
+        self.ensure_one()
+        for i in self.snack:
+            if i.stock < self.cantidad_snack:
+                raise ValidationError("No hay suficiente stock")
+            else:
+                i.stock -=self.cantidad_snack
+
+
     def eliminaFacturas(self):
           historialFacturas = self.search([("active","=","True")])
           for rec in historialFacturas:

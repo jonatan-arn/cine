@@ -9,6 +9,7 @@
             <group name="GrupoPadre">
               <field name="name"/>
               <field name="precio"/>
+              <field name="stock"/>
               <field name="foto" widget="image" style="width: 120px; height: 150px;"/>
             </group>
           </sheet>
@@ -25,6 +26,7 @@
           <field name="name"/>
           <field name="precio"/>
           <field name="foto"/>
+          <field name="stock"/>
         </tree>
       </field>
     </record>

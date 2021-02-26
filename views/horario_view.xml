@@ -41,12 +41,22 @@
         </tree>
       </field>
     </record>
+        <record model="ir.ui.view" id="cine.calendar_horarios_tree">
+            <field name="name">Calendario de Horarios</field>
+            <field name="model">cine.horario_sala_model</field>
+            <field name="arch" type="xml">
+                <calendar date_start="hora" color="name" mode="week" form_view_id="cine.listado_horarios_form" quick_add="False" event_open_popup="True">
+                    <field name="pelicula" />
+                    <field name="sala" />
+                </calendar>
+            </field>
+        </record>
 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="cine.action_window_horarios">
       <field name="name">Listado de horarios</field>
       <field name="res_model">cine.horario_sala_model</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,calendar</field>
     </record>
 
 

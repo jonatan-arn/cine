@@ -12,6 +12,7 @@ class snacks_model(models.Model):
     precio = fields.Integer(String="Precio de la butaca",required=True)
     foto = fields.Binary(String="foto")
     venta = fields.One2many("cine.venta_snack_model","snack")
+    stock = fields.Integer(String="stock snack",required=True)
 
     
     
