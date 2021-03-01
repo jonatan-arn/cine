@@ -18,7 +18,7 @@ class venta_entradas_model(models.Model):
         for r in self:
             r.venta.precio_total += r.cantidad * r.entrada.precio
 
-    @api.constrains('horario_sala_model')
+    @api.constrains('entrada')
     def actulizaButacas(self):        
         for r in self:
             if r.entrada.butacas_libres < r.cantidad:
