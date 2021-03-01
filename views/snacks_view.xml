@@ -10,7 +10,7 @@
               <field name="name"/>
               <field name="precio"/>
               <field name="stock"/>
-              <field name="foto" widget="image" style="width: 120px; height: 150px;"/>
+              <field name="foto" widget="image" style="width: 120px; height: 150px;"/>              
             </group>
           </sheet>
         </form>

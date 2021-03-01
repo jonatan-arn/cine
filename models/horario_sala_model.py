@@ -13,7 +13,7 @@ class horario_sala_model(models.Model):
     hora = fields.Datetime(String="Hora a la que se proyecta la pelicula",required=True)
     sala = fields.Many2one("cine.salas_model",String="Sala donde se proyecta la pelicula",required=True)
     butacas_libres = fields.Integer(String="Butacas libres de la sala",required=True,default=lambda self: self.sala.cantidad_butacas_totales)
-    
+    venta = fields.Many2one("cine.venta_entradas_model","snack")
     
     @api.depends('name')
     def crearName(self):

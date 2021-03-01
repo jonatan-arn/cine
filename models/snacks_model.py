@@ -11,13 +11,12 @@ class snacks_model(models.Model):
     name= fields.Char(String="Nombre del snack",index=True,required=True)
     precio = fields.Integer(String="Precio de la butaca",required=True)
     foto = fields.Binary(String="foto")
-    venta = fields.One2many("cine.venta_snack_model","snack")
+    venta = fields.Many2one("cine.venta_snack_model","snack")
     stock = fields.Integer(String="stock snack",required=True)
 
     
     
-    
-
+   
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()

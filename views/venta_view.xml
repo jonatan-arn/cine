@@ -1,0 +1,89 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="cine.listado_venta_form">
+      <field name="name">Formulario de facturas</field>
+      <field name="model">cine.venta_model</field>
+      <field name="arch" type="xml">
+        <form string="Nueva ventas">
+          <header>
+            <button name="eliminaFacturas" type="object" confirm="Desea eliminar las facturas?" string="Eliminar facturas" class="oe_highlight" />
+            <button name="ocultarFacturas" type="object" string="Archivar facturas" class="oe_highlight" />
+          </header>
+          <sheet>
+
+            <group name="GrupoPadre">
+              <field name="id"/>
+              <field name="snack">
+                <tree>
+                  <field name = "cantidad"/>
+                    <field name = "snack"/>
+                    </tree>
+                  </field>  
+                  <field name="entrada">
+                    <tree>
+                      <field name = "cantidad"/>
+                        <field name = "entrada"/>
+                        </tree>
+                      </field>
+                      <field name="precio_total"/>
+                      <label for="fecha" class="oe_edit_only" />
+                      <h1>
+                        <field name="fecha"/>
+                      </h1>
+                    </group>
+
+                  </sheet>
+                </form>
+              </field>
+            </record>
+
+            <record model="ir.ui.view" id="cine.listado_venta_tree">
+              <field name="name">Listado de facturas</field>
+              <field name="model">cine.venta_model</field>
+              <field name="arch" type="xml">
+                <tree >
+                  <field name="id"/>
+                  <field name="fecha"/>
+                  <field name="precio_total"/>
+                </tree>
+              </field>
+            </record>
+
+
+
+
+            <record model="ir.ui.view" id="cine.venta_pivot">
+              <field name="name">Pivot de facturas</field>
+              <field name="model">cine.venta_model</field>
+              <field name="arch" type="xml">
+                <pivot string="Pivot de Ventas">
+                  <field name="fecha" type="row" interval="month" />
+                  <field name="precio_total" type="measure" />
+                </pivot>
+              </field>
+            </record>
+
+
+            <record model="ir.ui.view" id="cine.venta_graph">
+              <field name="name">Grafico de facturas</field>
+              <field name="model">cine.venta_model</field>
+              <field name="arch" type="xml">
+                <graph type="bar" stacked="True" string="Grafico de Ventas">
+                  <field name="fecha" type="row" interval="month" />
+                  <field name="precio_total" type="measure" />
+                </graph>
+              </field>
+            </record>
+
+
+
+            <!-- actions opening views on models -->
+            <record model="ir.actions.act_window" id="cine.action_window_venta">
+              <field name="name">Listado de ventas de snacks</field>
+              <field name="res_model">cine.venta_model</field>
+              <field name="view_mode">tree,form,graph,pivot</field>
+            </record>
+
+
+          </data>
+        </odoo>
