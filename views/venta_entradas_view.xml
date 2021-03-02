@@ -1,10 +1,22 @@
 <odoo>
   <data>
 
-
+  <record model="ir.ui.view" id="cine.venta_entradas">
+  <field name="name">Formulario de venta de entradas</field>
+      <field name="model">cine.venta_entradas_model</field>
+      <field name="arch" type="xml">
+        <form string="Nueva sala">
+          <sheet>
+          <field name="cantidad"/>
+          <field name="entrada"/>
+          
+          </sheet>
+          </form>
+          </field>
+  </record>
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="cine.action_window_entrada_cantidad">
-      <field name="name">Listado de entradas</field>
+      <field name="name">Listado de venta entradas</field>
       <field name="res_model">cine.venta_entradas_model</field>
       <field name="view_mode">tree,form</field>
     </record>

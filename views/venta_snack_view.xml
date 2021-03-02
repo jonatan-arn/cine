@@ -1,7 +1,19 @@
 <odoo>
   <data>
 
-
+<record model="ir.ui.view" id="cine.venta_snacks">
+  <field name="name">Formulario de venta de snacks</field>
+      <field name="model">cine.venta_snack_model</field>
+      <field name="arch" type="xml">
+        <form string="Nuevo snack">
+          <sheet>
+          <field name="cantidad"/>
+          <field name="snack"/>
+          
+          </sheet>
+          </form>
+          </field>
+  </record>
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="cine.action_window_snacks_cantidad">
       <field name="name">Listado de snacks</field>
